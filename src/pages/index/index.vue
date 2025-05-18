@@ -4,12 +4,36 @@
     <view class="text-area">
       <text class="title">{{ title }}</text>
     </view>
+    <press-button
+      type="default"
+      :custom-style="customStyle"
+      @click="onClick"
+    >
+      这是PressButton按钮1
+    </press-button>
+    <press-button
+      type="primary"
+      :custom-style="customStyle"
+      @click="onClick"
+    >
+      这是PressButton按钮2
+    </press-button>
   </view>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+
+import PressButton from 'press-ui/press-button/press-button.vue'
+
 const title = ref('Hello')
+
+const customStyle = 'margin-right: 50px;'
+
+const onClick = (event) => {
+  console.log('click', event)
+}
+
 </script>
 
 <style>

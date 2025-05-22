@@ -18,6 +18,7 @@
     >
       这是PressButton按钮2
     </press-button>
+    <press-dialog-plus id="press-dialog" />
   </view>
 </template>
 
@@ -33,22 +34,18 @@ const customStyle = 'margin-right: 50px;'
 
 async function onClick(event) {
   console.log('click', event)
-  try {
-      console.log('showConfirmDialog111');
-      await showConfirmDialog({
-        title: '温馨提示',
-        message: '游客每天免费3次，登录后获取更多额度',
-        confirmButtonText: '去登录',
-        cancelButtonText: '继续使用',
-        showCancelButton: true,
-        closeOnClickOverlay: true
-      });
-      console.log('showConfirmDialog222');
-      return;
-    } catch (e) {
-      // 用户点击取消，检查使用次数
-      console.log('showConfirmDialog333');
-    }
+  showConfirmDialog({
+    title: '标题',
+    message: '弹窗内容',
+  })
+    .then(() => {
+      // on confirm
+      console.log('on confirm')
+    })
+    .catch(() => {
+      // on cancel
+      console.log('on cancel')
+    });
 }
 
 </script>

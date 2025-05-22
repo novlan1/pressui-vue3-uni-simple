@@ -26,6 +26,7 @@
 import { ref } from 'vue'
 
 import PressButton from 'press-ui/press-button/press-button.vue'
+import PressDialogPlus from 'press-ui/press-dialog-plus/press-dialog-plus.vue'
 import { showConfirmDialog } from 'press-ui/press-dialog-plus/handler';
 
 const title = ref('Hello')

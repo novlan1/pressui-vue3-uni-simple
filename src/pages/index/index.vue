@@ -25,13 +25,30 @@
 import { ref } from 'vue'
 
 import PressButton from 'press-ui/press-button/press-button.vue'
+import { showConfirmDialog } from 'press-ui/press-dialog-plus/handler';
 
 const title = ref('Hello')
 
 const customStyle = 'margin-right: 50px;'
 
-const onClick = (event) => {
+async function onClick(event) {
   console.log('click', event)
+  try {
+      console.log('showConfirmDialog111');
+      await showConfirmDialog({
+        title: '温馨提示',
+        message: '游客每天免费3次，登录后获取更多额度',
+        confirmButtonText: '去登录',
+        cancelButtonText: '继续使用',
+        showCancelButton: true,
+        closeOnClickOverlay: true
+      });
+      console.log('showConfirmDialog222');
+      return;
+    } catch (e) {
+      // 用户点击取消，检查使用次数
+      console.log('showConfirmDialog333');
+    }
 }
 
 </script>

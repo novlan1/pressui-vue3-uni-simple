@@ -14,9 +14,9 @@
     <press-button
       type="primary"
       :custom-style="customStyle"
-      @click="onClick"
+      @click="goToTabs"
     >
-      这是PressButton按钮2
+      查看tab下的数据表格
     </press-button>
     <press-dialog-plus id="press-dialog" />
   </view>
@@ -49,6 +49,11 @@ async function onClick(event) {
     });
 }
 
+function goToTabs() {
+  uni.navigateTo({
+    url: '/pages/tabs/tabs'
+  })
+}
 </script>
 
 <style>

@@ -5,6 +5,14 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path": "pages/tabs/tabs",
+			"style": {
+				"navigationBarTitleText": "数据表格",
+				"navigationBarBackgroundColor": "#667eea",
+				"navigationBarTextStyle": "white"
+			}
 		}
 	],
 	"globalStyle": {

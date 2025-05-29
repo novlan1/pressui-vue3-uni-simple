@@ -1,74 +1,74 @@
 <template>
-  <view class="tabs-page">
+  <view custom-class="tabs-page">
     <press-tabs :active="activeTab" @change="onTabChange" :swipeable="false">
       <press-tab title="用户信息">
-        <view class="table-container">
-          <view class="table-wrapper">
-            <press-row class="table-header" :gutter="0">
-              <press-col :span="4" class="table-cell header-cell">姓名</press-col>
-              <press-col :span="4" class="table-cell header-cell">年龄</press-col>
-              <press-col :span="4" class="table-cell header-cell">性别</press-col>
-              <press-col :span="4" class="table-cell header-cell">职业</press-col>
-              <press-col :span="4" class="table-cell header-cell">城市</press-col>
-              <press-col :span="4" class="table-cell header-cell">状态</press-col>
+        <view custom-class="table-container">
+          <view custom-class="table-wrapper">
+            <press-row custom-class="table-header" :gutter="0">
+              <press-col :span="4" custom-class="table-cell header-cell">姓名</press-col>
+              <press-col :span="4" custom-class="table-cell header-cell">年龄</press-col>
+              <press-col :span="4" custom-class="table-cell header-cell">性别</press-col>
+              <press-col :span="4" custom-class="table-cell header-cell">职业</press-col>
+              <press-col :span="4" custom-class="table-cell header-cell">城市</press-col>
+              <press-col :span="4" custom-class="table-cell header-cell">状态</press-col>
             </press-row>
-            <press-row v-for="(user, index) in userList" :key="index" class="table-row" :gutter="0">
-              <press-col :span="4" class="table-cell">{{ user.name }}</press-col>
-              <press-col :span="4" class="table-cell">{{ user.age }}</press-col>
-              <press-col :span="4" class="table-cell">{{ user.gender }}</press-col>
-              <press-col :span="4" class="table-cell">{{ user.job }}</press-col>
-              <press-col :span="4" class="table-cell">{{ user.city }}</press-col>
-              <press-col :span="4" class="table-cell">{{ user.status }}</press-col>
+            <press-row v-for="(user, index) in userList" :key="index" custom-class="table-row" :gutter="0">
+              <press-col :span="4" custom-class="table-cell">{{ user.name }}</press-col>
+              <press-col :span="4" custom-class="table-cell">{{ user.age }}</press-col>
+              <press-col :span="4" custom-class="table-cell">{{ user.gender }}</press-col>
+              <press-col :span="4" custom-class="table-cell">{{ user.job }}</press-col>
+              <press-col :span="4" custom-class="table-cell">{{ user.city }}</press-col>
+              <press-col :span="4" custom-class="table-cell">{{ user.status }}</press-col>
             </press-row>
           </view>
         </view>
       </press-tab>
       
       <press-tab title="产品数据">
-        <view class="table-container">
-          <view class="table-wrapper">
-            <press-row class="table-header" :gutter="0">
-              <press-col :span="3" class="table-cell header-cell">产品名称</press-col>
-              <press-col :span="3" class="table-cell header-cell">价格</press-col>
-              <press-col :span="3" class="table-cell header-cell">库存</press-col>
-              <press-col :span="3" class="table-cell header-cell">分类</press-col>
-              <press-col :span="3" class="table-cell header-cell">品牌</press-col>
-              <press-col :span="3" class="table-cell header-cell">评分</press-col>
-              <press-col :span="3" class="table-cell header-cell">销量</press-col>
-              <press-col :span="3" class="table-cell header-cell">状态</press-col>
+        <view custom-class="table-container">
+          <view custom-class="table-wrapper">
+            <press-row custom-class="table-header" :gutter="0">
+              <press-col :span="3" custom-class="table-cell header-cell">产品名称</press-col>
+              <press-col :span="3" custom-class="table-cell header-cell">价格</press-col>
+              <press-col :span="3" custom-class="table-cell header-cell">库存</press-col>
+              <press-col :span="3" custom-class="table-cell header-cell">分类</press-col>
+              <press-col :span="3" custom-class="table-cell header-cell">品牌</press-col>
+              <press-col :span="3" custom-class="table-cell header-cell">评分</press-col>
+              <press-col :span="3" custom-class="table-cell header-cell">销量</press-col>
+              <press-col :span="3" custom-class="table-cell header-cell">状态</press-col>
             </press-row>
-            <press-row v-for="(product, index) in productList" :key="index" class="table-row" :gutter="0">
-              <press-col :span="3" class="table-cell">{{ product.name }}</press-col>
-              <press-col :span="3" class="table-cell">¥{{ product.price }}</press-col>
-              <press-col :span="3" class="table-cell">{{ product.stock }}</press-col>
-              <press-col :span="3" class="table-cell">{{ product.category }}</press-col>
-              <press-col :span="3" class="table-cell">{{ product.brand }}</press-col>
-              <press-col :span="3" class="table-cell">{{ product.rating }}</press-col>
-              <press-col :span="3" class="table-cell">{{ product.sales }}</press-col>
-              <press-col :span="3" class="table-cell">{{ product.status }}</press-col>
+            <press-row v-for="(product, index) in productList" :key="index" custom-class="table-row" :gutter="0">
+              <press-col :span="3" custom-class="table-cell">{{ product.name }}</press-col>
+              <press-col :span="3" custom-class="table-cell">¥{{ product.price }}</press-col>
+              <press-col :span="3" custom-class="table-cell">{{ product.stock }}</press-col>
+              <press-col :span="3" custom-class="table-cell">{{ product.category }}</press-col>
+              <press-col :span="3" custom-class="table-cell">{{ product.brand }}</press-col>
+              <press-col :span="3" custom-class="table-cell">{{ product.rating }}</press-col>
+              <press-col :span="3" custom-class="table-cell">{{ product.sales }}</press-col>
+              <press-col :span="3" custom-class="table-cell">{{ product.status }}</press-col>
             </press-row>
           </view>
         </view>
       </press-tab>
       
       <press-tab title="订单统计">
-        <view class="table-container">
-          <view class="table-wrapper">
-            <press-row class="table-header" :gutter="0">
-              <press-col :span="4" class="table-cell header-cell">订单号</press-col>
-              <press-col :span="4" class="table-cell header-cell">客户</press-col>
-              <press-col :span="4" class="table-cell header-cell">金额</press-col>
-              <press-col :span="4" class="table-cell header-cell">日期</press-col>
-              <press-col :span="4" class="table-cell header-cell">支付方式</press-col>
-              <press-col :span="4" class="table-cell header-cell">状态</press-col>
+        <view custom-class="table-container">
+          <view custom-class="table-wrapper">
+            <press-row custom-class="table-header" :gutter="0">
+              <press-col :span="4" custom-class="table-cell header-cell">订单号</press-col>
+              <press-col :span="4" custom-class="table-cell header-cell">客户</press-col>
+              <press-col :span="4" custom-class="table-cell header-cell">金额</press-col>
+              <press-col :span="4" custom-class="table-cell header-cell">日期</press-col>
+              <press-col :span="4" custom-class="table-cell header-cell">支付方式</press-col>
+              <press-col :span="4" custom-class="table-cell header-cell">状态</press-col>
             </press-row>
-            <press-row v-for="(order, index) in orderList" :key="index" class="table-row" :gutter="0">
-              <press-col :span="4" class="table-cell">{{ order.orderNo }}</press-col>
-              <press-col :span="4" class="table-cell">{{ order.customer }}</press-col>
-              <press-col :span="4" class="table-cell">¥{{ order.amount }}</press-col>
-              <press-col :span="4" class="table-cell">{{ order.date }}</press-col>
-              <press-col :span="4" class="table-cell">{{ order.payMethod }}</press-col>
-              <press-col :span="4" class="table-cell">{{ order.status }}</press-col>
+            <press-row v-for="(order, index) in orderList" :key="index" custom-class="table-row" :gutter="0">
+              <press-col :span="4" custom-class="table-cell">{{ order.orderNo }}</press-col>
+              <press-col :span="4" custom-class="table-cell">{{ order.customer }}</press-col>
+              <press-col :span="4" custom-class="table-cell">¥{{ order.amount }}</press-col>
+              <press-col :span="4" custom-class="table-cell">{{ order.date }}</press-col>
+              <press-col :span="4" custom-class="table-cell">{{ order.payMethod }}</press-col>
+              <press-col :span="4" custom-class="table-cell">{{ order.status }}</press-col>
             </press-row>
           </view>
         </view>

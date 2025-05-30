@@ -21,7 +21,7 @@
     <div class="location-content">
       <press-area
         ref="pressArea"
-        :area-list="areaList"
+        :area-list="computedAreaList"
         :value="selectedAreaCode"
         title="选择地区"
         :visible-item-count="6"
@@ -38,7 +38,7 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref, reactive, computed } from 'vue';
 
 import PressPopupPlus from 'press-ui/press-popup-plus/press-popup-plus.vue';
 import PressArea from 'press-ui/press-area/press-area.vue';
@@ -93,13 +93,28 @@ const areaList = {
   }
 };
 
+
 const props = defineProps({
   show: Boolean,
+  type: {
+    type: String,
+    default: '1'
+  },
   date: {
     type: Date,
     default: () => new Date()
   }
 });
+
+const computedAreaList  = computed(() => {
+  return {
+    ...areaList,
+    province_list:{
+      [props.type]: props.type,
+      ...areaList.province_list,
+    }
+  }
+})
 
 const emit = defineEmits(['update:show', 'confirm']);
 

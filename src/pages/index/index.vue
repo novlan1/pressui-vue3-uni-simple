@@ -18,7 +18,20 @@
     >
       查看tab下的数据表格
     </press-button>
+    <press-button
+      type="warning"
+      @click="openArea"
+    >
+      打开地区选择弹窗
+    </press-button>
     <press-dialog-plus id="press-dialog" />
+    
+    <AreaSelector 
+      :show="showArea" 
+      :date="currentDate"
+      @update:show="(value) => showArea = value"
+      @confirm="onAreaConfirm"
+    />
   </view>
 </template>
 
@@ -27,9 +40,12 @@ import { ref } from 'vue'
 
 import PressButton from 'press-ui/press-button/press-button.vue'
 import PressDialogPlus from 'press-ui/press-dialog-plus/press-dialog-plus.vue'
+import AreaSelector from '../area/area.vue'
 import { showConfirmDialog } from 'press-ui/press-dialog-plus/handler';
 
 const title = ref('Hello')
+const showArea = ref(false)
+const currentDate = ref(new Date())
 
 const customStyle = 'margin-right: 50px;'
 
@@ -53,6 +69,15 @@ function goToTabs() {
   uni.navigateTo({
     url: '/pages/tabs/tabs'
   })
+}
+
+function openArea() {
+  showArea.value = true
+}
+
+function onAreaConfirm(locationData) {
+  console.log('选择的地区:', locationData)
+  showArea.value = false
 }
 </script>
 

@@ -20,7 +20,7 @@
 
     <div class="location-content">
       <press-area
-        ref="pressArea"
+        ref="pressAreaRef"
         :area-list="computedAreaList"
         :value="selectedAreaCode"
         title="选择地区"
@@ -38,11 +38,11 @@
 </template>
 
 <script setup>
-import { ref, reactive, computed } from 'vue';
+import { ref, reactive, computed, onMounted } from 'vue';
 
 import PressPopupPlus from 'press-ui/press-popup-plus/press-popup-plus.vue';
 import PressArea from 'press-ui/press-area/press-area.vue';
-
+const pressAreaRef = ref(null)
 // 简化的地区数据
 const areaList = {
   province_list: {
@@ -92,8 +92,11 @@ const areaList = {
     '440304': '福田区'
   }
 };
-
-
+onMounted(() => {
+  setTimeout(() => {
+    // pressAreaRef.vue?.setValues()
+  }, 300)
+})
 const props = defineProps({
   show: Boolean,
   type: {

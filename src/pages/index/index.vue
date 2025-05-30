@@ -24,12 +24,40 @@
     >
       打开地区选择弹窗
     </press-button>
+    <press-button
+      type="warning"
+      @click="() => showArea2 = true"
+    >
+      打开地区选择弹窗2
+    </press-button>
+     <press-button
+      type="warning"
+      @click="() => showArea3 = true"
+    >
+      打开地区选择弹窗3
+    </press-button>
     <press-dialog-plus id="press-dialog" />
     
     <AreaSelector 
       :show="showArea" 
+      type="1"
       :date="currentDate"
       @update:show="(value) => showArea = value"
+      @confirm="onAreaConfirm"
+    />
+
+    <AreaSelector 
+      :show="showArea2" 
+      type="2"
+      :date="currentDate"
+      @update:show="(value) => showArea2 = value"
+      @confirm="onAreaConfirm"
+    />
+     <AreaSelector 
+      :show="showArea3" 
+      type="3"
+      :date="currentDate"
+      @update:show="(value) => showArea3 = value"
       @confirm="onAreaConfirm"
     />
   </view>
@@ -45,6 +73,8 @@ import { showConfirmDialog } from 'press-ui/press-dialog-plus/handler';
 
 const title = ref('Hello')
 const showArea = ref(false)
+const showArea2 = ref(false)
+const showArea3 = ref(false)
 const currentDate = ref(new Date())
 
 const customStyle = 'margin-right: 50px;'
@@ -77,7 +107,9 @@ function openArea() {
 
 function onAreaConfirm(locationData) {
   console.log('选择的地区:', locationData)
-  showArea.value = false
+  showArea.value = false;
+  showArea2.value = false;
+  showArea3.value = false;
 }
 </script>
 

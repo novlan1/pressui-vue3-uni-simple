@@ -51,6 +51,7 @@
     "@dcloudio/uni-mp-xhs": "3.0.0-4030620241128001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4030620241128001",
     "press-ui": "3.0.17",
+    "t-comm": "^1.5.40",
     "vue": "^3.4.21",
     "vue-i18n": "^9.1.9"
   },
@@ -60,7 +61,7 @@
     "@dcloudio/uni-cli-shared": "3.0.0-4030620241128001",
     "@dcloudio/uni-stacktracey": "3.0.0-4030620241128001",
     "@dcloudio/vite-plugin-uni": "3.0.0-4030620241128001",
-    "@plugin-light/vite-plugin-gen-version": "^0.0.7",
+    "@plugin-light/vite-plugin-gen-version": "^0.0.11",
     "@plugin-light/vite-plugin-rem-to-rpx": "^0.0.6",
     "@plugin-light/vite-plugin-transform-v-lazy": "^0.0.6",
     "@vue/runtime-core": "^3.4.21",

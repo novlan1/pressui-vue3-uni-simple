@@ -54,8 +54,8 @@ importers:
         specifier: 3.0.0-4030620241128001
         version: 3.0.0-4030620241128001(postcss@8.5.3)(rollup@4.41.0)(vue@3.5.14(typescript@4.9.5))
       press-ui:
-        specifier: 3.0.16
-        version: 3.0.16
+        specifier: 3.0.17
+        version: 3.0.17
       vue:
         specifier: ^3.4.21
         version: 3.5.14(typescript@4.9.5)
@@ -2607,6 +2607,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -3337,8 +3338,8 @@ packages:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
 
-  press-ui@3.0.16:
-    resolution: {integrity: sha512-8VoBotTi3NQvuZWJ/Zl4Qw6ulpFTKd5jaPFh85LfBNjtMIaZa7nj+Bo5dXJKo1sgSDEzpsipRdGzaxCxpoW/8w==}
+  press-ui@3.0.17:
+    resolution: {integrity: sha512-i4eCxQrd//1sUB8Io1yXQ48n7vXJtH4Dnq4U3PvS7KxtWDdi4xkU+XbH5l7cso1ybZLiOujAs/fhP+SDBvRSGQ==}
     engines: {node: '>=14'}
 
   pretty-format@27.5.1:
@@ -8386,7 +8387,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  press-ui@3.0.16: {}
+  press-ui@3.0.17: {}
 
   pretty-format@27.5.1:
     dependencies:

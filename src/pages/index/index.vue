@@ -36,6 +36,13 @@
     >
       打开地区选择弹窗3
     </press-button>
+    <press-button
+      type="warning"
+      @click="() => showDateTimePicker = true"
+    >
+      打开时间选择弹窗
+    </press-button>
+
     <press-dialog-plus id="press-dialog" />
     
     <AreaSelector 
@@ -60,6 +67,11 @@
       @update:show="(value) => showArea3 = value"
       @confirm="onAreaConfirm"
     />
+    
+    <datetime
+      :show="showDateTimePicker"
+      @update:show="(value) => showDateTimePicker = value"
+    />
   </view>
 </template>
 
@@ -69,12 +81,14 @@ import { ref } from 'vue'
 import PressButton from 'press-ui/press-button/press-button.vue'
 import PressDialogPlus from 'press-ui/press-dialog-plus/press-dialog-plus.vue'
 import AreaSelector from '../area/area.vue'
+import datetime from '../datetime/datetime.vue'
 import { showConfirmDialog } from 'press-ui/press-dialog-plus/handler';
 
 const title = ref('Hello')
 const showArea = ref(false)
 const showArea2 = ref(false)
 const showArea3 = ref(false)
+const showDateTimePicker = ref(false)
 const currentDate = ref(new Date())
 
 const customStyle = 'margin-right: 50px;'
@@ -110,6 +124,10 @@ function onAreaConfirm(locationData) {
   showArea.value = false;
   showArea2.value = false;
   showArea3.value = false;
+}
+
+function showDateTime() {
+  showDateTimePicker.value = true
 }
 </script>
 

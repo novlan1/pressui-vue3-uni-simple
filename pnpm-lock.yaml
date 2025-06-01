@@ -54,8 +54,8 @@ importers:
         specifier: 3.0.0-4030620241128001
         version: 3.0.0-4030620241128001(postcss@8.5.3)(rollup@4.41.0)(vue@3.5.14(typescript@4.9.5))
       press-ui:
-        specifier: 5.0.1
-        version: 5.0.1
+        specifier: 5.0.3
+        version: 5.0.3
       t-comm:
         specifier: ^1.5.40
         version: 1.5.40
@@ -3361,8 +3361,8 @@ packages:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
 
-  press-ui@5.0.1:
-    resolution: {integrity: sha512-n4byHuBhivVDeB7MGu2UCRPFDuACw3BuJiA8T1NJRS3b4/ITp/rkJI4FLp/wP6c7tbx8SLnz34gUAVpL3ZTTOw==}
+  press-ui@5.0.3:
+    resolution: {integrity: sha512-N5P0htlgVstOlSnU6NRY/+2BZimy/iajIyXEsPWusWX+WrsVq9Ph7L8TTgtrxGJBIqFuUPbu9KE3R9Gg9vp1dA==}
     engines: {node: '>=14'}
 
   pretty-format@27.5.1:
@@ -8450,7 +8450,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  press-ui@5.0.1: {}
+  press-ui@5.0.3: {}
 
   pretty-format@27.5.1:
     dependencies:

@@ -1,5 +1,5 @@
 <template>
-  <press-popup-plus
+  <press-popup
     :show="props.show"
     @update:show="(value) => emit('update:show', value)"
     position="bottom"
@@ -32,13 +32,14 @@
         :min-date="minDate"
         :max-date="maxDate"
         :show-toolbar="false"
-        @input="onGregorianDateChange"
+        @input="onGregorianDateInput"
+        @change="onGregorianDateChange"
       />
     </div>
     
     <!-- 底部确定按钮 -->
     <div class="bottom-confirm-button" @click="onConfirm">确定</div>
-  </press-popup-plus>
+  </press-popup>
 
   <press-toast id="press-toast" />
 </template>
@@ -48,7 +49,7 @@ import PressToast from 'press-ui/press-toast/press-toast.vue';
 import Toast from 'press-ui/press-toast';
 import { ref, computed, watch } from 'vue';
 
-import PressPopupPlus from 'press-ui/press-popup-plus/press-popup-plus.vue';
+import PressPopup from 'press-ui/press-popup/press-popup.vue';
 import PressButton from 'press-ui/press-button/press-button.vue';
 import PressField from 'press-ui/press-field/press-field.vue';
 import PressDatetimePicker from 'press-ui/press-datetime-picker/press-datetime-picker.vue';
@@ -82,13 +83,17 @@ const gregorianDateValue = computed(() => {
 function onGregorianDateChange(timestamp) {
   console.log('Gregorian datetime picker changed:', timestamp);
   
-  if (!timestamp) {
-    console.warn('无效的时间戳', timestamp);
-    return;
-  }
+  // if (!timestamp) {
+  //   console.warn('无效的时间戳', timestamp);
+  //   return;
+  // }
   
-  // 直接更新统一的时间变量
-  selectedDateTime.value = timestamp;
+  // // 直接更新统一的时间变量
+  // selectedDateTime.value = timestamp;
+}
+
+function onGregorianDateInput(value) {
+  console.log('onGregorianDateInput', value)
 }
 
 // Handle today button
@@ -172,7 +177,8 @@ watch(() => props.date, (newDate) => {
   border-bottom: 1px solid #f5f5f5;
 }
 
-.cancel-button, .today-button {
+.cancel-button,
+.today-button {
   color: #000;
   font-size: 16px;
   padding: 5px 10px;

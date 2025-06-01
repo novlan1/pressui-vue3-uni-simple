@@ -1,5 +1,5 @@
 <template>
-  <press-popup-plus
+  <press-popup
     :show="props.show"
     @update:show="(value) => emit('update:show', value)"
     position="bottom"
@@ -34,13 +34,13 @@
     </div>
     
     <div class="bottom-confirm-button" @click="onConfirm">确定</div>
-  </press-popup-plus>
+  </press-popup>
 </template>
 
 <script setup>
 import { ref, reactive, computed, onMounted } from 'vue';
 
-import PressPopupPlus from 'press-ui/press-popup-plus/press-popup-plus.vue';
+import PressPopup from 'press-ui/press-popup/press-popup.vue';
 import PressArea from 'press-ui/press-area/press-area.vue';
 const pressAreaRef = ref(null)
 // 简化的地区数据

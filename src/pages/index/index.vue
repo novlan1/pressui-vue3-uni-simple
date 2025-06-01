@@ -43,7 +43,7 @@
       打开时间选择弹窗
     </press-button>
 
-    <press-dialog-plus id="press-dialog" />
+    <press-dialog id="press-dialog" />
     
     <AreaSelector 
       :show="showArea" 
@@ -79,10 +79,10 @@
 import { ref } from 'vue'
 
 import PressButton from 'press-ui/press-button/press-button.vue'
-import PressDialogPlus from 'press-ui/press-dialog-plus/press-dialog-plus.vue'
+import PressDialog from 'press-ui/press-dialog/press-dialog.vue'
 import AreaSelector from '../area/area.vue'
 import datetime from '../datetime/datetime.vue'
-import { showConfirmDialog } from 'press-ui/press-dialog-plus/handler';
+import { showConfirmDialog } from 'press-ui/press-dialog/handler';
 
 const title = ref('Hello')
 const showArea = ref(false)

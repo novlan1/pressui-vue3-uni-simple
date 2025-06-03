@@ -72,6 +72,8 @@
       :show="showDateTimePicker"
       @update:show="(value) => showDateTimePicker = value"
     />
+
+    <button class="abc" bindtap="onLogin">抖音授权登录</button>
   </view>
 </template>
 
@@ -114,6 +116,18 @@ function goToTabs() {
     url: '/pages/tabs/tabs'
   })
 }
+defineOptions({
+  onLogin() {
+    uni.getUserProfile({
+    success(res) {
+      console.log('onLogin.res', res)
+    },
+    fail(err) {
+      console.log('onLogin.fail', err)
+    }
+  })
+  }
+})
 
 function openArea() {
   showArea.value = true
@@ -129,6 +143,8 @@ function onAreaConfirm(locationData) {
 function showDateTime() {
   showDateTimePicker.value = true
 }
+
+
 </script>
 
 <style>

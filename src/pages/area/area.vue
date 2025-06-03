@@ -93,6 +93,7 @@ const areaList = {
   }
 };
 onMounted(() => {
+  console.log('area.mounted')
   setTimeout(() => {
     // pressAreaRef.vue?.setValues()
   }, 300)
@@ -130,7 +131,7 @@ const selectedLocation = reactive({
 });
 
 // 默认选中北京市
-const selectedAreaCode = ref('110100');
+const selectedAreaCode = ref('120101');
 
 // 地区选择变化事件
 function onAreaChange(event) {

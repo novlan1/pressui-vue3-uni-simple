@@ -50,7 +50,7 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-4030620241128001",
     "@dcloudio/uni-mp-xhs": "3.0.0-4030620241128001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4030620241128001",
-    "press-ui": "5.0.8",
+    "press-ui": "5.0.15",
     "t-comm": "^1.5.40",
     "vue": "^3.4.21",
     "vue-i18n": "^9.1.9"
